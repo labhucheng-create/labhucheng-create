@@ -2,19 +2,19 @@
   <img src="./assets/hero.svg" alt="Li Hucheng profile hero" width="100%" />
 </p>
 
-<p align="center"><strong>Systems / CUDA / Speech AI</strong></p>
+<p align="center"><strong>Low-level Software / Driver Development / CUDA / Speech AI</strong></p>
 
 <p align="center">
-  I build low-level compute software with a focus on runtime usability, operator performance, and system-facing infrastructure.
+  I build low-level software and driver-facing compute infrastructure with a focus on CUDA runtime usability, operator performance, and engineering-ready systems work.
 </p>
 <p align="center">
-  我主要做底层计算软件，重点放在 CUDA Runtime、算子优化，以及能真正落地到开发者工作流里的系统能力。
+  我主要做底层软件和驱动开发，重点放在 CUDA Runtime、算子优化，以及能真正落地到开发者工作流里的系统能力。
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Driver_Development-20242E?style=for-the-badge&logoColor=white" alt="Driver Development" />
   <img src="https://img.shields.io/badge/CUDA_Runtime-20242E?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA Runtime" />
   <img src="https://img.shields.io/badge/Operator_Optimization-235D79?style=for-the-badge&logoColor=white" alt="Operator Optimization" />
-  <img src="https://img.shields.io/badge/Systems-6C5640?style=for-the-badge&logoColor=white" alt="Systems" />
   <img src="https://img.shields.io/badge/Speech_AI-686FDD?style=for-the-badge&logoColor=white" alt="Speech AI" />
 </p>
 
@@ -33,6 +33,8 @@ Built and refined a CUDA-like software stack around runtime interfaces, device-s
 
 - Worked on runtime-facing interfaces that make low-level compute capabilities easier to expose to upper-layer developers.
 - 参与运行时接口设计与实现，让底层算力能力能以更稳定、更易用的方式提供给上层开发者。
+- Built and debugged low-level software paths close to the driver boundary, covering device control, resource coordination, and engineering-facing integration details.
+- 参与靠近驱动边界的底层软件路径开发与调试，覆盖设备控制、资源协同以及面向工程落地的接口衔接。
 - Built control and resource-management paths for device interaction, including mechanisms similar to `ioctl`, event synchronization, and library-side abstractions.
 - 覆盖设备控制、资源访问、事件机制和库函数封装等关键路径，减少上层使用成本。
 - Focused on operator optimization with a SIMT-style execution model, especially around parallel partitioning, reducing synchronization overhead, and balancing compute with data movement.
@@ -57,8 +59,8 @@ Participated in bias evaluation research for speech-centric large models through
 ## Focus
 
 ```text
-C / C++ / CUDA Runtime / Operator Optimization
-Linux-Facing Systems Work / SIMT / Parallel Execution
+C / C++ / Low-level Software / Driver Development
+CUDA Runtime / Operator Optimization / SIMT / Parallel Execution
 Speech AI Evaluation / Benchmark Design / Model Analysis
 ```
 

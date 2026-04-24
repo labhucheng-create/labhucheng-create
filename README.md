@@ -2,97 +2,67 @@
   <img src="./assets/hero.svg" alt="Li Hucheng profile hero" width="100%" />
 </p>
 
-<h1 align="center">Li Hucheng</h1>
 <p align="center"><strong>Systems / CUDA / Speech AI</strong></p>
-<p align="center">
-  Low-level systems engineer focused on Linux drivers, CUDA-like runtime infrastructure, PCIe/DMA data paths, and speech-centric AI research.
-</p>
-<p align="center">
-  我主要做芯片底层软件与 AI 系统相关工作，关注 Linux 驱动、CUDA Runtime、算子优化、PCIe/DMA 数据链路，以及语音大模型研究。
-</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Linux%20Drivers-20242E?style=for-the-badge&logo=linux&logoColor=white" alt="Linux Drivers" />
-  <img src="https://img.shields.io/badge/CUDA%20Runtime-1E5974?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA Runtime" />
-  <img src="https://img.shields.io/badge/PCIe%20%2F%20DMA-6F5340?style=for-the-badge&logoColor=white" alt="PCIe DMA" />
-  <img src="https://img.shields.io/badge/Operator%20Optimization-57595D?style=for-the-badge&logoColor=white" alt="Operator Optimization" />
-  <img src="https://img.shields.io/badge/Speech%20AI-6B72DB?style=for-the-badge&logoColor=white" alt="Speech AI" />
+  I build low-level compute software with a focus on runtime usability, operator performance, and system-facing infrastructure.
+</p>
+<p align="center">
+  我主要做底层计算软件，重点放在 CUDA Runtime、算子优化，以及能真正落地到开发者工作流里的系统能力。
 </p>
 
-## Snapshot
+<p align="center">
+  <img src="https://img.shields.io/badge/CUDA_Runtime-20242E?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA Runtime" />
+  <img src="https://img.shields.io/badge/Operator_Optimization-235D79?style=for-the-badge&logoColor=white" alt="Operator Optimization" />
+  <img src="https://img.shields.io/badge/Systems-6C5640?style=for-the-badge&logoColor=white" alt="Systems" />
+  <img src="https://img.shields.io/badge/Speech_AI-686FDD?style=for-the-badge&logoColor=white" alt="Speech AI" />
+</p>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Education</h3>
-      <p><strong>Hunan University</strong><br/>AI Graduate Study, 2025-present</p>
-      <p><strong>Changsha University</strong><br/>B.Eng. in Communication Engineering, 2016-2020</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Current Focus</h3>
-      <p>Building driver/runtime infrastructure that makes domestic compute platforms easier to program and validate.</p>
-      <p>Researching speech-centric large models, evaluation benchmarks, and bias analysis.</p>
-    </td>
-  </tr>
-</table>
+## Education
 
-## Selected Work
+**Hunan University**  
+AI Graduate Study, 2025-present  
+湖南大学，人工智能方向硕士阶段学习
 
-### CUDA-like Runtime, Driver, and PCIe Host SDK
-**Suzhou Ruixin Integrated Circuit Co., Ltd.**  
-Worked on a Tianmai 3 compute stack in a domestic OS + self-developed RISC-V accelerator environment.
+## Featured Project
 
-- Developed `ioctl`-based control paths between user space and devices.
-- Participated in CUDA-like device driver architecture for device management and resource access.
-- Implemented runtime-side library functions and event mechanisms for foundational compute APIs.
-- Helped build the PCIe Host SDK path between Host and EP, including DMA data transfer links.
-- Delivered 4 core modules that formed an initial runtime programming framework and reduced later algorithm migration cost.
+### CUDA Runtime & Operator Optimization
 
-### VPU Validation and Performance Optimization
-**Suzhou Ruixin Integrated Circuit Co., Ltd.**
+Built and refined a CUDA-like software stack around runtime interfaces, device-side coordination, and operator-side performance work.  
+围绕 CUDA 风格的软件栈，持续做运行时接口、设备协同和算子性能优化相关工作。
 
-- Covered end-to-end encode/decode validation across GOP combinations, high resolutions, and multi-instance scenarios.
-- Built performance baselines and regression data generation for multi-resolution and multi-format workloads.
-- Diagnosed issues such as sequence init interrupts, firmware loading failures, second-frame encode failures, and multi-instance stalls.
-- Improved VPU decode throughput from **1200 fps** to **2300 fps**.
-- Improved single-stream **8K encode** throughput from **15 fps** to **30 fps**.
-
-### Embedded BSP and Driver Development
-**Changsha Jingjia Microelectronics Co., Ltd.**
-
-- Developed or ported low-level modules including SPI Flash, NAND Flash, PCIe, RS232/RS422, GPIO, ADC, I2C, and EEPROM drivers.
-- Ported the YAFFS file system on bare-metal boards and adapted PMON boot flow on the Loongson platform.
-- Supported CPU + FPGA + GPU heterogeneous graphics/display processing boards with external communication and video pipelines.
-- Implemented NTB-mode communication to connect PCIe RC-to-RC links.
+- Worked on runtime-facing interfaces that make low-level compute capabilities easier to expose to upper-layer developers.
+- 参与运行时接口设计与实现，让底层算力能力能以更稳定、更易用的方式提供给上层开发者。
+- Built control and resource-management paths for device interaction, including mechanisms similar to `ioctl`, event synchronization, and library-side abstractions.
+- 覆盖设备控制、资源访问、事件机制和库函数封装等关键路径，减少上层使用成本。
+- Focused on operator optimization with a SIMT-style execution model, especially around parallel partitioning, reducing synchronization overhead, and balancing compute with data movement.
+- 在算子优化上重点处理并行切分、同步开销、访存与计算平衡，面向实际性能收益而不是纸面指标。
+- Connected runtime work with system-facing infrastructure so the stack is not just runnable, but usable for later algorithm migration and engineering iteration.
+- 这部分工作的目标不是只把程序跑起来，而是把整套基础设施做成后续算法迁移和工程迭代真正能用的底座。
 
 ## Research
 
-### AudioBias-Bench for Speech-Centric Large Models
+### AudioBias-Bench / Speech AI Research
 
-- Participated in building **AudioBias-Bench** and the **ECHO 22K** dataset for social bias evaluation in speech-centric large models.
-- Designed tasks spanning both speech recognition and speech generation bias evaluation.
-- Evaluated 15 mainstream speech-centric large models and analyzed age-related recognition/generation bias.
-- Explored Chain-of-Thought style debiasing methods and their performance tradeoffs.
+Participated in bias evaluation research for speech-centric large models through benchmark and dataset construction.  
+参与语音大模型偏见评测相关研究，主要工作集中在 benchmark 与数据集建设。
 
-### Applied AI and Operator Optimization
+- Contributed to **AudioBias-Bench** and the **ECHO 22K** dataset for social-bias evaluation in speech-centric models.
+- 参与构建 **AudioBias-Bench** 与 **ECHO 22K**，用于语音中心大模型的社会偏见评测。
+- Designed tasks spanning speech recognition and generation, then analyzed how different models behave across demographic dimensions.
+- 设计覆盖识别与生成的评测任务，并分析不同模型在多类人群维度上的表现差异。
+- Explored debiasing ideas inspired by Chain-of-Thought style reasoning and examined their tradeoffs against baseline model performance.
+- 探索基于思维链风格推理的去偏置方法，并关注其与基础性能之间的权衡。
 
-- Built a U-Net based medical image workflow for tumor detection and segmentation using OpenCV and PyTorch.
-- Optimized LayerNorm-style operators under a SIMT programming model, focusing on compute/communication overlap and parallel partitioning.
-
-## Skills
+## Focus
 
 ```text
-C / C++ / Linux Driver Development / IOCTL / PCIe / DMA
-CUDA Runtime / Compute APIs / Operator Optimization / SIMT / SIMD
-Embedded BSP / Validation / Performance Tuning / Speech AI Research
-PyTorch / OpenCV / Benchmark Design / Large Model Evaluation
+C / C++ / CUDA Runtime / Operator Optimization
+Linux-Facing Systems Work / SIMT / Parallel Execution
+Speech AI Evaluation / Benchmark Design / Model Analysis
 ```
 
 ## Contact
 
 - Email: [lihucheng0330@163.com](mailto:lihucheng0330@163.com)
 - Location: Changsha, Hunan, China
-
-<p align="center">
-  <sub>Focused on serious systems work, while keeping one foot in CUDA infrastructure and one in speech AI research.</sub>
-</p>

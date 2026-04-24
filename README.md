@@ -8,7 +8,7 @@
   I build low-level software and driver-facing compute infrastructure with a focus on CUDA runtime usability, operator performance, and engineering-ready systems work.
 </p>
 <p align="center">
-  我主要做底层软件和驱动开发，重点放在 CUDA Runtime、算子优化，以及能真正落地到开发者工作流里的系统能力。
+  我主要做底层软件和驱动开发，重点放在 CUDA Runtime、算子优化，以及擅长Linux驱动开发，主要针对于低高速总线以及VPU视频编解码驱动。
 </p>
 
 <p align="center">

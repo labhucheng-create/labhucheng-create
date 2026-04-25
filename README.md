@@ -54,4 +54,3 @@ Speech AI Evaluation / Benchmark Design / Model Analysis
 ## Contact
 
 - Email: [lihucheng0330@163.com](mailto:lihucheng0330@163.com)
-- Location: Changsha, Hunan, China

@@ -22,7 +22,6 @@
 
 **Hunan University**  
 AI Graduate Study, 2025-present  
-湖南大学，人工智能方向硕士阶段学习
 
 ## Featured Project
 
